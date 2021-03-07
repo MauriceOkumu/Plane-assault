@@ -323,6 +323,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6005033971764753848}
     m_Modifications:
+    - target: {fileID: 2016217726714553626, guid: 62e45545b93db4762900c8f49b161ac4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 4524846606270122482, guid: 62e45545b93db4762900c8f49b161ac4,
         type: 3}
       propertyPath: lasers.Array.size

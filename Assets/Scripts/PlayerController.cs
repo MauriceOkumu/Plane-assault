@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,23 +24,14 @@ public class PlayerController : MonoBehaviour
   //Text will be shown on hover
   [Tooltip("Add all laser guns here")][SerializeField] GameObject[] lasers;
   float clampX, clampY, xRoll, yRoll;
-   
+  
     void Update()
     {
         ProcessTranslation();
         ProcessRotation();
         ProcessShooting();
     
-    }
-
-    void OnCollisionEnter(Collision other) {
-        ReloadLevel();
-    }
-    void ReloadLevel()
-    {
-        int currentIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentIndex);
-    }
+    } 
     // Left, right, up, down movement
      void ProcessTranslation()
     {
