@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,6 +32,15 @@ public class PlayerController : MonoBehaviour
         ProcessRotation();
         ProcessShooting();
     
+    }
+
+    void OnCollisionEnter(Collision other) {
+        ReloadLevel();
+    }
+    void ReloadLevel()
+    {
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentIndex);
     }
     // Left, right, up, down movement
      void ProcessTranslation()
