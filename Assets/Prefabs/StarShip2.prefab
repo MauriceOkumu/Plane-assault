@@ -2966,6 +2966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 3489890264458930966}
+  efx: {fileID: 0}
 --- !u!82 &8774336637820465348
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3909,6 +3910,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155263546256580803, guid: f8d3841e2ca7348438050c6561747f7c,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d3841e2ca7348438050c6561747f7c, type: 3}
