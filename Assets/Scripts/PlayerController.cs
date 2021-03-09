@@ -24,6 +24,11 @@ public class PlayerController : MonoBehaviour
   //Text will be shown on hover
   [Tooltip("Add all laser guns here")][SerializeField] GameObject[] lasers;
   float clampX, clampY, xRoll, yRoll;
+
+   AudioSource laser;
+    void Start(){
+        laser = GetComponent<AudioSource>();
+    }
   
     void Update()
     {
@@ -74,26 +79,24 @@ public class PlayerController : MonoBehaviour
     //Firing 
     void ProcessShooting()
     {
-
-        //Default left Ctrl or mouse key
             
         if(Input.GetButton("Fire1")) {
-
+           
+        if (!laser.isPlaying) laser.Play();
         ActivateLasers(true);
         }
         else {
-
         ActivateLasers(false);
         }
     }
 
     void ActivateLasers(bool input)
     {
-        foreach(GameObject laser in lasers)
+        foreach(GameObject laserGun in lasers)
         {
-            var thing = laser.GetComponent<ParticleSystem>().emission;
-            
-                thing.enabled  = input;
+            var laserShot = laserGun.GetComponent<ParticleSystem>().emission;
+           
+                laserShot.enabled  = input;
          
         }
     }

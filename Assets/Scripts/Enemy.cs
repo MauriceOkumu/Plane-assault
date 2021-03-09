@@ -5,10 +5,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
   [SerializeField] GameObject explosionVfx;
-  [SerializeField] Transform parent;
+   GameObject explosionParent;
    Score score;
+
    void Start() {
       score = FindObjectOfType<Score>();
+      explosionParent = GameObject.FindWithTag("Explosions");
+      addRigibody();
+   }
+   void addRigibody() 
+   {
+      Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+      rb.useGravity = false;
+
    }
 
    void OnParticleCollision(GameObject other) {
@@ -20,7 +29,7 @@ public class Enemy : MonoBehaviour
     void killEnemy()
     {
         GameObject vfx = Instantiate(explosionVfx, transform.position, Quaternion.identity);
-        vfx.transform.parent = parent;
+        vfx.transform.parent = explosionParent.transform;
         Destroy(gameObject);
 
     }
