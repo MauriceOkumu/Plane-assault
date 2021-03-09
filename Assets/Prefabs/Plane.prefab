@@ -202,6 +202,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarShip
       objectReference: {fileID: 0}
+    - target: {fileID: 4719022887042753064, guid: 2143a956f7d7044058d4d0cb27840f9d,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719022887042753064, guid: 2143a956f7d7044058d4d0cb27840f9d,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774336637820465348, guid: 2143a956f7d7044058d4d0cb27840f9d,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0.202
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051512200328999115, guid: 2143a956f7d7044058d4d0cb27840f9d,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9051512200328999115, guid: 2143a956f7d7044058d4d0cb27840f9d,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202589427791082700, guid: 2143a956f7d7044058d4d0cb27840f9d,
+        type: 3}
+      propertyPath: efx
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b60698e2cb1549a8a8c75bb5b608bfe, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2143a956f7d7044058d4d0cb27840f9d, type: 3}
 --- !u!4 &6000747035728843976 stripped
