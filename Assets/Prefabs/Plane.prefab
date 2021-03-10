@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6005033971734218741}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.13, z: -11.897}
+  m_LocalPosition: {x: -0.1, y: 0.398, z: -12.826}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6005033971764753848}
@@ -212,6 +212,21 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4719022888102058847, guid: 2143a956f7d7044058d4d0cb27840f9d,
+        type: 3}
+      propertyPath: yRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719022888102058847, guid: 2143a956f7d7044058d4d0cb27840f9d,
+        type: 3}
+      propertyPath: ySpeed
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774336637820465348, guid: 2143a956f7d7044058d4d0cb27840f9d,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a210b86da21b4f738ed2d6345864eb5, type: 3}
     - target: {fileID: 8774336637820465348, guid: 2143a956f7d7044058d4d0cb27840f9d,
         type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value

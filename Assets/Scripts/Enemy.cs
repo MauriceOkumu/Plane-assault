@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
   [SerializeField] GameObject hitVfx;
   [SerializeField] int hitPoints;
   [SerializeField] int killPoints;
+  [SerializeField] int healthPoints;
    GameObject explosionParent;
    Score score;
 
@@ -24,17 +25,22 @@ public class Enemy : MonoBehaviour
    }
 
    void OnParticleCollision(GameObject other) {
+       processEnemyHit();
+       killEnemy();
+       
+    }
+    void processEnemyHit()
+    {
       hitPoints++;
       GameObject vfx = Instantiate(hitVfx, transform.position, Quaternion.identity);
       vfx.transform.parent = explosionParent.transform;
-       score.updateScore(hitPoints);
-       killEnemy();
-       
+      score.updateScore(hitPoints);
+
     }
 
     void killEnemy()
     {
-       if(hitPoints >= 6) {
+       if(hitPoints >= healthPoints) {
        score.updateScore(killPoints);
         GameObject vfx = Instantiate(explosionVfx, transform.position, Quaternion.identity);
         vfx.transform.parent = explosionParent.transform;
@@ -42,4 +48,5 @@ public class Enemy : MonoBehaviour
        }
 
     }
+
 }
